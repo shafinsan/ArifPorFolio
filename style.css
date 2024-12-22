@@ -1,0 +1,19 @@
+/* Smooth scroll behavior */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Hamburger menu transition */
+#menu {
+    transition: all 0.3s ease-in-out;
+}
+
+#menu.hidden {
+    opacity: 0;
+    pointer-events: none;
+}
+
+#menu.flex {
+    opacity: 1;
+    pointer-events: auto;
+}
