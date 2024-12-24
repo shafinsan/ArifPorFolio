@@ -1,96 +1,160 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Golam Kibria - Marketing Executive</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link
-        href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
-        rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+      rel="stylesheet"
     />
     <link
-        href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
-        rel="stylesheet"
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
     />
     <link rel="stylesheet" href="style.css" />
-</head>
-<body class="bg-gray-900 text-white font-sans">
 
+    <style>
+      body {
+        transition: background-color 0.5s, color 0.5s;
+      }
+
+      /* Default (Dark Mode) */
+      body.dark-mode {
+        background-color: #1a202c; /* Dark background */
+        color: #ffffff; /* Light text */
+      }
+
+      /* Light Mode */
+      body.light-mode {
+        background-color: #ffffff; /* Light background */
+        color: #000000; /* Dark text */
+      }
+
+      header {
+        transition: background-color 0.5s;
+      }
+
+      /* Adjust header background for light mode */
+      body.light-mode header {
+        background-color: #f7fafc;
+      }
+
+      .nav-link:hover {
+        transition: color 0.3s;
+      }
+
+      section {
+        padding: 4rem 1rem;
+        text-align: center;
+        transition: background-color 0.5s, color 0.5s;
+      }
+
+      /* Section styling for light mode */
+      body.light-mode section {
+        background-color: #f9f9f9;
+        color: #333333;
+      }
+
+      /* Section styling for dark mode */
+      body.dark-mode section {
+        background-color: #2d3748;
+        color: #e2e8f0;
+      }
+    </style>
+
+
+  </head>
+  <body class="bg-gray-900 text-white font-sans">
     <!-- Navbar -->
     <header class="bg-gray-800 p-4 fixed w-full top-0 z-10 shadow-md">
-        <div class="container mx-auto flex justify-between items-center">
-            <a href="#" class="text-2xl font-bold">Golam Kibria</a>
-            <button id="menu-btn" class="text-2xl md:hidden focus:outline-none">
-                <i class="bx bx-menu"></i>
-            </button>
-            <nav
-                id="menu"
-                class="hidden flex-col md:flex md:flex-row md:space-x-6 absolute md:static bg-gray-800 w-full md:w-auto md:top-auto top-16 left-0"
-            >
-                <a href="#home" class="nav-link px-4 py-2 hover:text-pink-500">Home</a>
-                <a href="#about" class="nav-link px-4 py-2 hover:text-pink-500">About Me</a>
-                <a href="#education" class="nav-link px-4 py-2 hover:text-pink-500">Education</a>
-                <a href="#skills" class="nav-link px-4 py-2 hover:text-pink-500">Skills</a>
-                <a href="#experience" class="nav-link px-4 py-2 hover:text-pink-500">Experience</a>
-                <a href="#contact" class="nav-link px-4 py-2 hover:text-pink-500">Contact</a>
-            </nav>
-        </div>
+      <div class="container mx-auto flex justify-between items-center">
+        <a href="#" class="text-2xl font-bold">Golam Kibria</a>
+        <button id="menu-btn" class="text-2xl md:hidden focus:outline-none">
+          <i class="bx bx-menu"></i>
+        </button>
+        <nav
+          id="menu"
+          class="hidden flex-col md:flex md:flex-row md:space-x-6 absolute md:static bg-gray-800 w-full md:w-auto md:top-auto top-16 left-0"
+        >
+          <a href="#home" class="nav-link px-4 py-2 hover:text-pink-500"
+            >Home</a
+          >
+          <a href="#about" class="nav-link px-4 py-2 hover:text-pink-500"
+            >About Me</a
+          >
+          <a href="#education" class="nav-link px-4 py-2 hover:text-pink-500"
+            >Education</a
+          >
+          <a href="#skills" class="nav-link px-4 py-2 hover:text-pink-500"
+            >Skills</a
+          >
+          <a href="#experience" class="nav-link px-4 py-2 hover:text-pink-500"
+            >Experience</a
+          >
+          <a href="#contact" class="nav-link px-4 py-2 hover:text-pink-500"
+            >Contact</a
+          >
+        </nav>
+      </div>
     </header>
 
     <!-- Home Section -->
     <section
-        id="home"
-        class="min-h-screen flex flex-col md:flex-row items-center justify-center bg-gray-900 pt-20"
+      id="home"
+      class="min-h-screen flex flex-col md:flex-row items-center justify-center bg-gray-900 pt-20"
     >
-        <div class="text-center md:text-left animate__animated animate__fadeIn md:w-1/2">
-            <h1 class="text-4xl md:text-6xl font-bold">
-                <i class="bx bx-user-circle text-pink-500"></i>
-                Hello, I'm Golam Kibria
-            </h1>
-            <h2
-                class="text-2xl md:text-4xl text-pink-500 mt-4 animate__animated animate__bounceIn"
-            >
-                <i class="bx bx-briefcase-alt-2"></i>
-                Marketing Executive
-            </h2>
-            <p
-                class="mt-6 text-lg max-w-2xl mx-auto md:mx-0 animate__animated animate__fadeInUp"
-            >
-                I am a distinguished graduate in Business Administration with
-                expertise in Marketing and Information Systems. Passionate about
-                driving strategies for growth and fostering international
-                collaborations.
-            </p>
-        </div>
-        <div
-            class="mt-8 md:mt-0 md:w-1/2 flex justify-center animate__animated animate__zoomIn"
+      <div
+        class="text-center md:text-left animate__animated animate__fadeIn md:w-1/2"
+      >
+        <h1 class="text-4xl md:text-6xl font-bold">
+          <i class="bx bx-user-circle text-pink-500"></i>
+          Hello, I'm Golam Kibria
+        </h1>
+        <h2
+          class="text-2xl md:text-4xl text-pink-500 mt-4 animate__animated animate__bounceIn"
         >
-            <img
-                src="./Picsart_22-05-22_14-33-16-687-fotor-bg-remover-2024122335421.png"
-                alt="Golam Kibria"
-                class="rounded-full shadow-lg w-64 md:w-80 hover:scale-110 hover:rotate-6 transform transition-transform duration-500"
-            />
-        </div>
+          <i class="bx bx-briefcase-alt-2"></i>
+          Marketing Executive
+        </h2>
+        <p
+          class="mt-6 text-lg max-w-2xl mx-auto md:mx-0 animate__animated animate__fadeInUp"
+        >
+          I am a distinguished graduate in Business Administration with
+          expertise in Marketing and Information Systems. Passionate about
+          driving strategies for growth and fostering international
+          collaborations.
+        </p>
+      </div>
+      <div
+        class="mt-8 md:mt-0 md:w-1/2 flex justify-center animate__animated animate__zoomIn"
+      >
+        <img
+          src="./mkibria.jpg"
+          alt="Golam Kibria"
+          class="rounded-full border-2 shadow-lg w-60 h-64  md:w-80 md:h-80 hover:scale-110 transform transition-transform duration-500"
+        />
+      </div>
     </section>
 
     <!-- About Section -->
     <section id="about" class="py-16 bg-gray-800">
-        <div
-            class="container mx-auto text-center animate__animated animate__fadeIn"
-        >
-            <h2 class="text-3xl font-bold">
-                <i class="bx bx-info-circle text-pink-500"></i>
-                About <span class="text-pink-500">Me</span>
-            </h2>
-            <p class="mt-4 text-lg max-w-3xl mx-auto">
-                I am a distinguished graduate from the School of Business and
-                Economics at United International University, where I completed my
-                Honors Bachelor of Business Administration in Management Information
-                Systems (MIS) in 2023. My academic journey has equipped me with strong
-                MIS principles and versatile organizational skills.
-            </p>
-        </div>
+      <div
+        class="container mx-auto text-center animate__animated animate__fadeIn"
+      >
+        <h2 class="text-3xl font-bold">
+          <i class="bx bx-info-circle text-pink-500"></i>
+          About <span class="text-pink-500">Me</span>
+        </h2>
+        <p class="mt-4 text-lg max-w-3xl mx-auto">
+          I am a distinguished graduate from the School of Business and
+          Economics at United International University, where I completed my
+          Honors Bachelor of Business Administration in Management Information
+          Systems (MIS) in 2023. My academic journey has equipped me with strong
+          MIS principles and versatile organizational skills.
+        </p>
+      </div>
     </section>
     <!-- Education Section -->
     <section id="education" class="py-16 bg-gray-900">
@@ -106,7 +170,7 @@
               Bachelor of Business Administration (MIS)
             </h3>
             <p>United International University, Dhaka, Bangladesh</p>
-            <p class="text-pink-500">CGPA: 4.0 (2018 - 2023)</p>
+            <p class="text-pink-500">CGPA: 3.02 (2018 - 2023)</p>
           </div>
           <div class="bg-gray-800 p-6 rounded-lg shadow-lg">
             <h3 class="text-2xl font-bold">
@@ -114,7 +178,7 @@
               Higher Secondary Certificate (HSC)
             </h3>
             <p>Government College of Commerce, Chattogram</p>
-            <p class="text-pink-500">GPA: 5.0 (2015 - 2017)</p>
+            <p class="text-pink-500">GPA: 3.67 (2015 - 2017)</p>
           </div>
           <div class="bg-gray-800 p-6 rounded-lg shadow-lg">
             <h3 class="text-2xl font-bold">
@@ -122,7 +186,7 @@
               Secondary School Certificate (SSC)
             </h3>
             <p>Shahin Academy, Feni</p>
-            <p class="text-pink-500">GPA: 5.0 (2013 - 2015)</p>
+            <p class="text-pink-500">GPA: 4.67 (2013 - 2015)</p>
           </div>
         </div>
       </div>
@@ -186,32 +250,32 @@
           <a href="tel:+8801836059200" class="text-pink-500">+880 1836059200</a>
         </p>
       </div>
-      <div class="flex justify-center md:mt-6 space-x-4">
+      <div class="flex justify-center mt-6 md:mt-6 space-x-4">
         <a
-            href="https://facebook.com"
-            target="_blank"
-            class="text-blue-600 hover:text-blue-800 text-3xl transition-colors"
-            aria-label="Facebook"
+          href="https://www.facebook.com/gk.s0011?mibextid=ZbWKwL"
+          target="_blank"
+          class="text-blue-600 hover:text-blue-800 text-3xl transition-colors"
+          aria-label="Facebook"
         >
-            <i class="bx bxl-facebook"></i>
+          <i class="bx bxl-facebook animate-pulse"></i>
         </a>
         <a
-            href="https://linkedin.com"
-            target="_blank"
-            class="text-blue-500 hover:text-blue-700 text-3xl transition-colors"
-            aria-label="LinkedIn"
+          href="https://www.linkedin.com/authwall?trk=bf&trkInfo=AQEjWa_EnvZnbgAAAZP58oHAiyEQRWVO2-yxXtYD8_dwewZW-iQJnSLgghwFIvWhowK2ym-Fex4kpEkiy0AYioNPumVm3kQKtLp_CagpVajeSTieuFYAk3Ljv4wIGojQ2wJd-bs=&original_referer=&sessionRedirect=https%3A%2F%2Fwww.linkedin.com%2Fin%2Fgolam-kibria-a8a44125a%3Futm_source%3Dshare%26utm_campaign%3Dshare_via%26utm_content%3Dprofile%26utm_medium%3Dandroid_app"
+          target="_blank"
+          class="text-blue-500 hover:text-blue-700 text-3xl transition-colors"
+          aria-label="LinkedIn"
         >
-            <i class="bx bxl-linkedin"></i>
+          <i class="bx bxl-linkedin animate-pulse"></i>
         </a>
         <a
-            href="https://wa.me/1234567890"
-            target="_blank"
-            class="text-green-500 hover:text-green-700 text-3xl transition-colors"
-            aria-label="WhatsApp"
+          href="https://wa.me/+8801836059200"
+          target="_blank"
+          class="text-green-500 hover:text-green-700 text-3xl transition-colors"
+          aria-label="WhatsApp"
         >
-            <i class="bx bxl-whatsapp"></i>
+          <i class="bx bxl-whatsapp animate-pulse"></i>
         </a>
-    </div>
+      </div>
     </section>
 
     <script src="app.js"></script>

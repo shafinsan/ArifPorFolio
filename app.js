@@ -29,3 +29,52 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 });
+document.addEventListener('DOMContentLoaded', () => {
+    const themeToggleBtn = document.getElementById('theme-toggle');
+    const body = document.body;
+    const icon = themeToggleBtn.querySelector('i');
+    const menu = document.getElementById('menu');
+
+    // Check if dark mode is already set from previous sessions
+    let isDarkMode = body.classList.contains('dark-mode');
+
+    // Apply the correct mode on load
+    if (isDarkMode) {
+        body.classList.add('dark-mode');
+        body.classList.remove('light-mode');
+        icon.classList.remove('bx-sun');
+        icon.classList.add('bx-moon');
+        menu.classList.add('menu_night');
+        menu.classList.remove('menu_white');
+    } else {
+        body.classList.add('light-mode');
+        body.classList.remove('dark-mode');
+        icon.classList.remove('bx-moon');
+        icon.classList.add('bx-sun');
+        menu.classList.add('menu_white');
+        menu.classList.remove('menu_night');
+    }
+
+    // Toggle theme when button is clicked
+    themeToggleBtn.addEventListener('click', () => {
+        isDarkMode = !isDarkMode;
+
+        if (isDarkMode) {
+            body.classList.remove('light-mode');
+            body.classList.add('dark-mode');
+            icon.classList.remove('bx-sun');
+            icon.classList.add('bx-moon');
+            menu.classList.remove('menu_white');
+            menu.classList.add('menu_night');
+        } else {
+            body.classList.remove('dark-mode');
+            body.classList.add('light-mode');
+            icon.classList.remove('bx-moon');
+            icon.classList.add('bx-sun');
+            menu.classList.remove('menu_night');
+            menu.classList.add('menu_white');
+        }
+    });
+});
+
+  
